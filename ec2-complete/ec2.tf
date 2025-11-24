@@ -12,7 +12,7 @@ module "ec2_instance" {
   key_name      = "terra-key"
 #   monitoring    = true
   subnet_id     = each.value
-  vpc_security_group_ids = [module.web_server_sg.security_group_id]
+  vpc_security_group_ids = [module.ec2_complete_sg.security_group_id]
   # associate_public_ip_address = true
   ami = "ami-0f918f7e67a3323f0"
 
